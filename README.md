@@ -26,7 +26,7 @@ This application example uses OpenSSH-server image made by LinuxServer.io. More 
 
 ![Network topology](docs/graphics/nfs_network.png)
 
-The Client is connected through SSH in Terminal to the OpenSSH-server container running on Industrial Edge Device. The server shares an NFS folder with Industrial Edge Device and the OpenSSH-server container uses this folder as a volume.
+The client is connected through SSH in Terminal to the OpenSSH-server container running on Industrial Edge Device. The server shares an NFS folder with Industrial Edge Device and the OpenSSH-server container uses this folder as a volume.
 
 ## Requirements
 
@@ -47,6 +47,8 @@ After installing the app to Industrial Edge Device, you should be able to SSH to
 
         ssh edge@192.168.178.20 -p 45555
         password: edge
+
+In the following pictures we can see a conversation between a server and a client. The client is connected through a terminal to a container running on an Industrial Edge Device that is using an NFS share as a volume. On the server, we create a new file called *hello.txt* and write "Hello, IED!" into it. We then read the file on the client computer and see the sentence has been succesfully saved on the server and the changes to the file were sent to the client. After that we write "Hello, Server!" on the client computer into the same *hello.txt* file. As we can see on the server computer, the changes were registered and the file on the server side now containes "Hello, Server!" message sent by the client.
 
 ![client](docs/graphics/hello1.png)
 
