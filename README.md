@@ -17,9 +17,9 @@
 
 ### Overview
 
-This is a tutorial on how to connect an NFS shared folder located on a server to a Industrial Edge Device and use it as a volume for Docker container.
+This is a tutorial on how to use a Network File System protocol (NFS for short) to connect a shared folder located on a server to a Industrial Edge Device and use it as a volume for Docker container.
 
-Network File System (NFS) is a file system protocol allowing a user on a client computer to access files over a network like a local storage.
+Network File System is a file system protocol allowing a user on a client computer to access files over a network like a local storage.
 
 This application example uses OpenSSH-server image made by LinuxServer.io. More info can be found at the following website: [OpenSSH-server website](https://hub.docker.com/r/linuxserver/openssh-server).
 
@@ -44,7 +44,7 @@ A step by step installation guide can be found in the [docs](docs/installation.m
 
 ## Usage
 
-After installing the app to Industrial Edge Device, you should be able to SSH to the OpenSSH-server container to test that everything works correctly.
+After installing the app to Industrial Edge Device, you should be able to SSH to the OpenSSH-server container to test that everything works correctly. Use the following credentials on your machine to connect to the Edge device to see how the NFS Docker volumes work. 
 
         ssh edge@192.168.178.20 -p 45555
         password: edge
