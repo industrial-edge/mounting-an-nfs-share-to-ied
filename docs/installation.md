@@ -18,13 +18,20 @@
 
 3. Configure NFS *exports* file on the server
 
+    File */etc/exports* contains configuration of shared resources.
+    First, you need to open the file in text editor with root privileges:
+    
         server$ sudo vim /etc/exports
-    The file has the following syntax
+    Commented lines in file show basic structure of configuration line.
+    Syntax looks like:
 
         directory_to_be_shared     share_to_who(option1,option2,...)
+    To enter editing mode, you need to press `i` and then insert requared line.
     So for our example, we will write
 
         /nfs/shared     192.168.178.20(rw,sync,no_subtree_check)
+    To exit editing mode, press `ESC`.
+    Enter `:wq` to save and exit the file.
 
 4. Restart the NFS server service
 
