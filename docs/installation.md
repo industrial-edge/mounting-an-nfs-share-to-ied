@@ -15,6 +15,7 @@
 
         server$ sudo mkdir -p /nfs/shared
         server$ sudo chown nobody:nogroup /nfs/shared
+        server$ sudo chmode a+rw /nfs/shared
 
 3. Configure NFS *exports* file on the server
 
