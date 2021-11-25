@@ -4,7 +4,7 @@
 
 ![Network topology](graphics/nfs_network.png)
 
-## Server set-up
+## Server set-up --delete this comment--
 
 1. Install the nfs-kernel-server package on the server
 
